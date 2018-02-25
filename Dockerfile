@@ -41,7 +41,7 @@ RUN apt-get -qqy update \
     php7.0-sybase \
     php7.0-xsl \
     php7.0-zip \
-    php7.0-dba &&
+    php7.0-dba && \
     rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
 #
