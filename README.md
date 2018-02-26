@@ -30,14 +30,14 @@ Use with [Kubernetes Jenkins Plugin](https://github.com/jenkinsci/kubernetes-plu
 
 ```groovy
 podTemplate(
-  name: 'php-v1',
-  label: 'k8s-jenkins-slave-php-v1',
+  name: 'php-v3',
+  label: 'k8s-jenkins-slave-php-v3',
   cloud: 'mycloud',
   nodeSelector: 'failure-domain.beta.kubernetes.io/zone=eu-west-1a',
   containers: [
     containerTemplate(
       name: 'jnlp',
-      image: 'cloutainer/k8s-jenkins-slave-php:v1',
+      image: 'cloutainer/k8s-jenkins-slave-php:v3',
       privileged: false,
       command: '/opt/docker-entrypoint.sh',
       args: '',
@@ -50,7 +50,7 @@ podTemplate(
     )
   ]
 ) {
-  node('k8s-jenkins-slave-php-v1') {
+  node('k8s-jenkins-slave-php-v3') {
     stage('build and test') {
       sh 'mvn -version'
       sh 'git clone https://github.com/clouless/WHATEVERAPP.git'

@@ -23,7 +23,6 @@ RUN apt-get -qqy update \
     php7.0-pspell \
     php7.0-readline \
     php7.0-recode \
-    php7.0-snmp \
     php7.0-sqlite3 \
     php7.0-tidy \
     php7.0-xml \
